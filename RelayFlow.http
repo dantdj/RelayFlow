@@ -1,0 +1,39 @@
+@RelayFlow_HostAddress = http://localhost:5121
+@subscriptionId = example-subscription
+@eventId = example-event
+@deliveryId = example-delivery
+
+POST {{RelayFlow_HostAddress}}/subscriptions
+Accept: application/json
+
+###
+
+GET {{RelayFlow_HostAddress}}/subscriptions
+Accept: application/json
+
+###
+
+DELETE {{RelayFlow_HostAddress}}/subscriptions/{{subscriptionId}}
+Accept: application/json
+
+###
+
+POST {{RelayFlow_HostAddress}}/events
+Accept: application/json
+
+###
+
+GET {{RelayFlow_HostAddress}}/events/{{eventId}}/deliveries
+Accept: application/json
+
+###
+
+GET {{RelayFlow_HostAddress}}/deliveries/{{deliveryId}}
+Accept: application/json
+
+###
+
+POST {{RelayFlow_HostAddress}}/deliveries/{{deliveryId}}/replay
+Accept: application/json
+
+###
